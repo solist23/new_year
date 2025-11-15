@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новогодний Квиз</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="quiz-style.css"> 
+</head>
+<body>
+    
+    <div class="snowflake-container"></div> 
+
+    <div class="quiz-content">
+        <div class="card quiz-card">
+            <h2>Новогоднее приключение!</h2>
+            <p class="quiz-instruction">Ответьте на вопросы, чтобы узнать, что принесет вам Дед Мороз!</p>
+
+            <form id="quizForm">
+                <div class="quiz-progress">
+                    <span id="questionCounter">Вопрос 1 из 5</span>
+                    <div class="progress-bar-container"><div id="progressBar" class="progress-bar"></div></div>
+                </div>
+
+                <div id="questionsContainer">
+
+                    <div class="question-block quiz-page" data-question="q1">
+                        <p class="question-title">1. Ваш любимый новогодний напиток?</p>
+                        <label><input type="radio" name="q1" value="A"> Горячий шоколад ☕</label>
+                        <label><input type="radio" name="q1" value="B"> Глинтвейн 🍷</label>
+                        <label><input type="radio" name="q1" value="C"> Шампанское 🥂</label>
+                    </div>
+
+                    <div class="question-block quiz-page" data-question="q2" style="display: none;">
+                        <p class="question-title">2. Как вы обычно встречаете Новый год?</p>
+                        <label><input type="radio" name="q2" value="A"> Шумная вечеринка с друзьями 🎉</label>
+                        <label><input type="radio" name="q2" value="B"> Уютный вечер в кругу семьи 🏡</label>
+                        <label><input type="radio" name="q2" value="C"> Путешествие в новое место ✈️</label>
+                    </div>
+                    
+                    <div class="question-block quiz-page" data-question="q3" style="display: none;">
+                        <p class="question-title">3. Что вы первым повесите на елку?</p>
+                        <label><input type="radio" name="q3" value="A"> Звезду на верхушку ⭐</label>
+                        <label><input type="radio" name="q3" value="B"> Яркие шары 🔴</label>
+                        <label><input type="radio" name="q3" value="C"> Гирлянду 💡</label>
+                    </div>
+
+                    <div class="question-block quiz-page" data-question="q4" style="display: none;">
+                        <p class="question-title">4. Ваше любимое новогоднее блюдо?</p>
+                        <label><input type="radio" name="q4" value="A"> Оливье 🥗</label>
+                        <label><input type="radio" name="q4" value="B"> Мандарины 🍊</label>
+                        <label><input type="radio" name="q4" value="C"> Шашлык (если тепло) 🍢</label>
+                    </div>
+                    
+                    <div class="question-block quiz-page" data-question="q5" style="display: none;">
+                        <p class="question-title">5. Идеальный новогодний подарок для вас?</p>
+                        <label><input type="radio" name="q5" value="A"> Что-то сделанное своими руками 👋</label>
+                        <label><input type="radio" name="q5" value="B"> Гаджет или технику 📱</label>
+                        <label><input type="radio" name="q5" value="C"> Путешествие или эмоции 🎁</label>
+                    </div>
+
+                </div>
+                <button type="button" id="nextQuestionBtn" class="button-primary submit-btn">Далее</button>
+                <button type="submit" id="finishQuizBtn" class="button-primary submit-btn" style="display: none;">Узнать предсказание!</button>
+            </form>
+
+            <div id="result" class="result-message" style="display: none;">
+                </div>
+            
+            <a href="index.html" class="back-link" style="display: none;">Вернуться на главную</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+    <script src="quiz-script.js"></script> 
+</body>
+</html>
